@@ -1,0 +1,31 @@
+.paragraph p{
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.title{
+  letter-spacing: 0.2rem;
+  font-size: 43px;
+  line-height: 50px;
+}
+.span-title{
+  color: #986DFF;
+}
+
+.button-banner {
+  background-color: #986DFF;
+  color: #fff;
+  font-size: 20px;
+  padding: 20px 32px;
+  border-radius: 4px; /* Bordas arredondadas */
+  border: none; /* Remove borda padrão */
+  cursor: pointer; /* Aplica o cursor de ponteiro */
+  transition: background-color 0.3s ease, transform 0.1s ease; /* Transição suave */
+  min-width: 240px;
+  min-height: 4rem;
+}
+
+.button-banner:hover {
+  background-color: #040615;
+  transform: scale(1.05); /* Leve aumento de tamanho para destaque */
+}
