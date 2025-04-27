@@ -12,7 +12,7 @@ import { FaGithub, FaLinkedin, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 const About: React.FC = () => {
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-5 lg:px-20 py-8">
       <Card className="card-container">
         <div className="card-flex">
           <CardHeader className="card-header">

@@ -3,10 +3,11 @@
   font-size: 1.2rem;
   font-weight: 400;
 }
+
 .title{
-  letter-spacing: 0.2rem;
-  font-size: 43px;
-  line-height: 50px;
+  letter-spacing: 0.1rem;
+  font-size: 30px;
+  line-height: 35px;
 }
 .span-title{
   color: #986DFF;
@@ -28,4 +29,12 @@
 .button-banner:hover {
   background-color: #040615;
   transform: scale(1.05); /* Leve aumento de tamanho para destaque */
+}
+
+@media(min-width: 768px){
+  .title{
+    letter-spacing: 0.2rem;
+    font-size: 43px;
+    line-height: 50px;
+  } 
 }

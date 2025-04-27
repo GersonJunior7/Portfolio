@@ -15,8 +15,8 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="header p-4">
-      <div className="container mx-auto px-4 py-8">
+    <header className="header">
+      <div className="container mx-auto px-5 lg:px-20 py-8">
         <nav className="flex justify-between items-center">
           <div>
             <h1 className="text-white text-2xl font-bold">DevGerson</h1>

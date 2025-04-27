@@ -8,4 +8,12 @@
   width: 100px;
   background-color: #0C0B16;
   border-radius: .1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease; 
+
+}
+
+.card:hover{
+  transform: translateX(10px);
+  background-color: #17152b;
 }
