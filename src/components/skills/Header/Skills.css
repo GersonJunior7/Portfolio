@@ -1,0 +1,11 @@
+.title-skills{
+  font-size: 2rem;
+}
+
+
+.card{
+  min-height: 100px;
+  width: 100px;
+  background-color: #0C0B16;
+  border-radius: .1rem;
+}
