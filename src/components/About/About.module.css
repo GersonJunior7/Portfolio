@@ -21,6 +21,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  padding: 10px;
   border-radius: 0.5rem;
 }
 
@@ -32,21 +33,21 @@
 .card-title {
   font-size: 1.4rem;
   font-weight: bold;
-  color: #986DFF;
+  color: #00BFFF;
 }
 .card-name{
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  color: #d4d4d4;
+  color: #ffffff;
 }
 .card-subtitle{
   font-size: 1.2rem;
   font-weight: bold;
-  color: #d4d4d4;
+  color: #ffffff;
 }
 
 .span-subtitle{
-  color: #986DFF;
+  color: #00BFFF;
 }
 
 .card-description {
@@ -66,9 +67,11 @@
 .icon{
   width: 24px;
   height: 24px;
-  color: "#986DFF"
+  color: #00BFFF;
 }
-
+.icon-link:hover .icon {
+  color: #ffffff; /* cor no hover (troque para a que quiser) */
+}
 .button-about{
   background-color: #040615;
   border: 1px solid #9797971f;
@@ -79,7 +82,7 @@
 @media(min-width: 768px){
   .card-container {
     width: 80%;
-    height: 550px;
+    height: auto;
   }
   .card-flex{
     flex-direction: row;

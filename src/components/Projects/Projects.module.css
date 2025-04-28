@@ -1,0 +1,92 @@
+.card {
+  height: 328px;
+  width: 440px;
+  background-color: #06091a;
+  padding: 20px;
+  transition: transform 0.3s ease-in-out; /* Animação de escala para o card */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.card-image {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  transition: transform 0.3s ease-in-out; /* Animação de escala para a imagem */
+}
+
+.card-image::before {
+  content: ""; /* Necessário para o pseudo-elemento */
+  background-color: rgba(0, 0, 0, 0.7); /* Fundo preto semi-transparente */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1; /* Coloca o overlay abaixo do texto */
+  transition: opacity 0.3s ease-in-out; /* Transição suave */
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%; /* Centraliza verticalmente */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translate(-50%, -50%); /* Ajuste para o centro exato */
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  z-index: 2; /* Coloca o texto acima do overlay */
+  text-align: center;
+  transition: opacity 0.3s ease-in-out; /* Transição suave para o texto desaparecer */
+}
+
+.view-project-btn {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  opacity: 0; /* Inicialmente escondido */
+  transition: opacity 0.3s ease-in-out; /* Transição suave */
+  width: 100%;
+  border-top: 1px solid #d4d4d4;
+  margin-top: 10px; /* Espaço entre a imagem e o botão */
+}
+
+.view-btn {
+  background-color: #3498db;
+  color: white;
+  padding: 5px 5px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 13px;
+  transition: background-color 0.3s ease;
+}
+
+.view-btn:hover {
+  background-color: #2980b9;
+}
+
+/* Efeito de hover */
+.card:hover {
+  transform: scale(1.05); /* Zoom no card */
+}
+
+.card:hover .card-image::before {
+  opacity: 0; /* Faz o fundo preto desaparecer */
+}
+
+.card:hover .text-overlay {
+  opacity: 0; /* Faz o texto desaparecer */
+}
+
+.card:hover .view-project-btn {
+  opacity: 1; /* Faz o botão aparecer */
+}
+
+.title-projects{
+  font-size: 2.5rem;
+  letter-spacing: 0.1rem;
+}

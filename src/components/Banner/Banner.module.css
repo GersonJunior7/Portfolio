@@ -6,15 +6,18 @@
 
 .title{
   letter-spacing: 0.1rem;
-  font-size: 30px;
   line-height: 35px;
+  font-weight: bold;
+  color: white;
+  font-size: 2rem;
 }
+
 .span-title{
-  color: #986DFF;
+  color: #00BFFF;
 }
 
 .button-banner {
-  background-color: #986DFF;
+  background-color: #00BFFF;
   color: #fff;
   font-size: 20px;
   padding: 20px 32px;

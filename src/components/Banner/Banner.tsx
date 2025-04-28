@@ -1,25 +1,24 @@
 import { FaWhatsapp } from "react-icons/fa";
 import { Button } from "../ui/button";
-import "./Banner.css"; // Importando o CSS
+import styles from "./Banner.module.css"; // Importando o CSS
 
 const Banner: React.FC = () => {
   return (
-    <div className="banner">
-      <div className="container-md mx-auto px-5 lg:px-20 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div className={styles.banner}>
+      <div className="container mx-auto px-5 lg:px-20 py-50">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {/* Texto sobre você */}
-          <div className="flex flex-col justify-center space-y-4">
-            <h2 className="title font-bold text-white">
-              Soluções Digitais que Ajudam{" "}
-              <span className="span-title">Empresas a se Destacarem</span> de
-              Forma Eficiente Online
+          <div className="flex flex-col justify-center">
+            <h2 className={styles.title}>
+              Soluções Digitais que Ajudam {}
+              <span className={styles["span-title"]}>
+                Empresas a se Destacarem
+              </span>{" "}
+              de Forma Eficiente Online
             </h2>
             <div className="mt-10">
-              <Button className="button-banner">
-                Vamos Conversar{" "}
-                <FaWhatsapp
-                  className="icon mr-2"
-                />
+              <Button className={styles["button-banner"]}>
+                Vamos Conversar <FaWhatsapp className="icon mr-2" />
               </Button>
             </div>
           </div>
@@ -27,9 +26,9 @@ const Banner: React.FC = () => {
           {/* Imagem */}
           <div className="flex justify-center items-center">
             <img
-              src="/path-to-your-image.jpg" // Altere com o caminho correto da sua imagem
-              alt="Foto sobre mim"
-              className="rounded-full w-48 h-48 object-cover"
+              src="https://placehold.co/500x500" // Substitua pelo seu URL de imagem
+              alt="Profile"
+              className="w-full h-full object-cover rounded-md"
             />
           </div>
         </div>

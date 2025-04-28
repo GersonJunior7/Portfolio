@@ -1,6 +1,7 @@
 .title-skills{
-  font-size: 2rem;
-}
+  font-size: 2.5rem;
+  letter-spacing: 0.1rem;
+}  
 
 
 .card{
@@ -16,4 +17,8 @@
 .card:hover{
   transform: translateX(10px);
   background-color: #17152b;
+}
+
+.background{
+  background-color: #0a091f;
 }

@@ -1,4 +1,4 @@
-import "./Header.css"; // Importando o CSS
+import styles from "./Header.module.css"; // Importando o CSS
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -15,7 +15,7 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="header">
+    <header  className={`${styles.header} fixed top-0 left-0 w-full z-50`}>
       <div className="container mx-auto px-5 lg:px-20 py-8">
         <nav className="flex justify-between items-center">
           <div>
@@ -28,7 +28,7 @@ const Header: React.FC = () => {
               <NavigationMenuList className="flex space-x-6">
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>
-                    <a href="#sobre" className="text-white hover:text-gray-400">
+                    <a href="#sobre" className="text-white text-1xl font-bold hover:text-gray-400">
                       Sobre
                     </a>
                   </NavigationMenuTrigger>
@@ -38,7 +38,7 @@ const Header: React.FC = () => {
                   <NavigationMenuTrigger>
                     <a
                       href="#habilidades"
-                      className="text-white hover:text-gray-400"
+                      className="text-white text-1xl font-bold hover:text-gray-400"
                     >
                       Habilidades
                     </a>
@@ -49,7 +49,7 @@ const Header: React.FC = () => {
                   <NavigationMenuTrigger>
                     <a
                       href="#projetos"
-                      className="text-white hover:text-gray-400"
+                      className="text-white text-1xl font-bold hover:text-gray-400"
                     >
                       Projetos
                     </a>
@@ -60,7 +60,7 @@ const Header: React.FC = () => {
                   <NavigationMenuTrigger>
                     <a
                       href="#contato"
-                      className="text-white hover:text-gray-400"
+                      className="text-white text-1xl font-bold hover:text-gray-400"
                     >
                       Contato
                     </a>

@@ -7,69 +7,94 @@ import {
   CardTitle,
 } from "../ui/card";
 import { Button } from "../ui/button";
-import "./About.css"; // Importando o CSS
+import styles from "./About.module.css"; // Importando o CSS
 import { FaGithub, FaLinkedin, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 const About: React.FC = () => {
   return (
-    <div className="container mx-auto px-5 lg:px-20 py-8">
-      <Card className="card-container">
-        <div className="card-flex">
-          <CardHeader className="card-header">
+    <div className="container mx-auto px-5 lg:px-20 pb-40">
+      <Card className={styles["card-container"]}>
+        <div className={styles["card-flex"]}>
+          <CardHeader className={styles["card-header"]}>
             <img
-              src="https://via.placeholder.com/250" // Substitua pelo seu URL de imagem
+              src="https://placehold.co/600x500" // Substitua pelo seu URL de imagem
               alt="Profile"
               className="w-full h-full object-cover rounded-md"
             />
           </CardHeader>
-          <CardContent className="card-content">
-            <CardTitle className="card-title">Quem sou eu?</CardTitle>
-            <CardTitle className="card-name mt-5">Gerson Junior</CardTitle>
-            <CardTitle className="card-subtitle mt-2">
+          <CardContent className={styles["card-content"]}>
+            <CardTitle className={styles["card-title"]}>Quem sou eu?</CardTitle>
+            <CardTitle className={`${styles["card-name"]} mt-5`}>
+              Gerson Junior
+            </CardTitle>
+            <CardTitle className={`${styles["card-subtitle"]} mt-2`}>
               Desenvolvedor <span className="span-subtitle">Full-Stack</span>
             </CardTitle>
-            <CardDescription className="card-description mt-10">
-              Me chamo Gerson Junior, desenvolvedor front-end apaixonado por
-              criar interfaces modernas e rápidas com React, Tailwind CSS, e
-              JavaScript. Com foco em performance e design responsivo, uso as
-              melhores ferramentas para entregar soluções digitais de alta
-              qualidade.
+            <CardDescription className={`${styles["card-description"]} mt-10`}>
+              Meu nome é Gerson Junior, desenvolvedor Full-Stack apaixonado por
+              criar interfaces modernas, rápidas e responsivas com React,
+              Tailwind CSS e JavaScript. Também tenho sólida experiência em PHP,
+              MySQL e otimização de SEO, garantindo que cada projeto seja não
+              apenas bonito e performático, mas também eficiente, seguro e bem
+              posicionado nos motores de busca. Utilizo as melhores tecnologias
+              para entregar soluções digitais de alta qualidade, focadas em
+              performance, usabilidade e resultados.
             </CardDescription>
-            <CardFooter className="card-footer mt-5">
-              <Button className="button-about" variant="outline" asChild>
+            <CardFooter className={`${styles["card-footer"]} mt-5`}>
+              <Button
+                className={styles["button-about"]}
+                variant="outline"
+                asChild
+              >
                 <a
                   href="https://wa.me/seunumerowhats"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className={styles["icon-link"]}
                 >
-                  <FaWhatsapp className="icon mr-2" style={{ color: "#986DFF" }}/>
+                  <FaWhatsapp className={`${styles["icon"]}`} />
                 </a>
               </Button>
-              <Button className="button-about" variant="outline" asChild>
+              <Button
+                className={styles["button-about"]}
+                variant="outline"
+                asChild
+              >
                 <a
                   href="https://instagram.com/seuuser"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className={styles["icon-link"]}
                 >
-                  <FaInstagram className="icon mr-2" style={{ color: "#986DFF" }}/>
+                  <FaInstagram className={styles["icon"]} />
                 </a>
               </Button>
-              <Button className="button-about" variant="outline" asChild>
+              <Button
+                className={styles["button-about"]}
+                variant="outline"
+                asChild
+              >
                 <a
                   href="https://linkedin.com/in/seuuser"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className={styles["icon-link"]}
                 >
-                  <FaLinkedin className="icon mr-2" style={{ color: "#986DFF" }}/>
+                  <FaLinkedin className={`${styles["icon"]}`} />
                 </a>
               </Button>
-              <Button className="button-about" variant="outline" asChild>
+              <Button
+                className={styles["button-about"]}
+                variant="outline"
+                asChild
+              >
                 <a
                   href="https://github.com/seuuser"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className={styles["icon-link"]}
                 >
-                  <FaGithub className="icon mr-2" style={{ color: "#986DFF" }}  />
+                  <FaGithub className={`${styles["icon"]}`} />
                 </a>
               </Button>
             </CardFooter>
