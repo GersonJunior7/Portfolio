@@ -59,7 +59,7 @@ const Skills: React.FC = () => {
     },
     {
       id: 6,
-      title: "Tailwinds Css",
+      title: "Tailwind Css",
       icon: <SiTailwindcss size={50} color="#06B6D4" />,
       description:
         "Um framework CSS baseado em utilitários que permite um controle preciso sobre o design da página, utilizando classes para definir estilos diretamente nos elementos HTML, tornando a construção de layouts rápida e flexível.",
