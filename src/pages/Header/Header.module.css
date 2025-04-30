@@ -1,0 +1,10 @@
+.header{
+  border-bottom: 0.5px solid #686868;
+  background-color: #020418;
+}
+
+.navegacao-mobile{
+  border-bottom: 0.5px solid #686868a1;
+  width: 100%;
+  height: 29px;
+}

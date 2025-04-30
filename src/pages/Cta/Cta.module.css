@@ -1,0 +1,32 @@
+.background{
+  background-image: url(../../assets/img/cta/background.png);
+  background-repeat: no-repeat;
+  background-color: #0A091F;
+  background-size: cover;
+}
+
+.span-color{
+  color: #00BFFF;
+}
+
+.button-cta {
+  background-color: #00BFFF;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px 12px;
+  border-radius: 4px; /* Bordas arredondadas */
+  border: none; /* Remove borda padrão */
+  cursor: pointer; /* Aplica o cursor de ponteiro */
+  transition: background-color 0.3s ease, transform 0.1s ease; /* Transição suave */
+  min-width: 240px;
+  min-height: 4rem;
+}
+
+.button-cta span {
+  font-weight: 500;
+}
+
+.title-cta{
+  font-size: 3rem;
+  line-height: 50px;
+}

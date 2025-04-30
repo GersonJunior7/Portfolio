@@ -1,5 +1,5 @@
 import { FaWhatsapp } from "react-icons/fa";
-import { Button } from "../ui/button";
+import { Button } from "../../components/ui/button";
 import styles from "./Banner.module.css"; // Importando o CSS
 
 const Banner: React.FC = () => {

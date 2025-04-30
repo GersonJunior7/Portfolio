@@ -1,8 +1,11 @@
-import About from "./components/About/About";
-import Banner from "./components/Banner/Banner";
-import Header from "./components/Header/Header";
-import Project from "./components/Projects/Projects";
-import Skills from "./components/skills/Skills";
+import About from "./pages/About/About";
+import Banner from "./pages/Banner/Banner";
+import Contact from "./pages/Contact/Contact";
+import Cta from "./pages/Cta/Cta";
+import Footer from "./pages/Footer/Footer";
+import Header from "./pages/Header/Header";
+import Project from "./pages/Projects/Projects";
+import Skills from "./pages/Skills/Skills";
 
 function App() {
   return (
@@ -12,6 +15,9 @@ function App() {
       <About />
       <Skills />
       <Project />
+      <Cta />
+      <Contact />
+      <Footer />
     </div>
   );
 }

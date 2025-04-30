@@ -95,7 +95,7 @@ const Header: React.FC = () => {
           <div className="md:hidden mt-5">
             <NavigationMenu>
               <NavigationMenuList className="flex flex-col space-y-4">
-                <NavigationMenuItem>
+                <NavigationMenuItem className={`${styles['navegacao-mobile']}`}>
                   <NavigationMenuTrigger>
                     <a href="#sobre" className="text-white hover:text-gray-400">
                       Sobre
@@ -103,18 +103,18 @@ const Header: React.FC = () => {
                   </NavigationMenuTrigger>
                 </NavigationMenuItem>
 
-                <NavigationMenuItem>
+                <NavigationMenuItem className={`${styles['navegacao-mobile']}`}>
                   <NavigationMenuTrigger>
                     <a
                       href="#habilidades"
-                      className="text-white hover:text-gray-400"
+                      className= "text-white hover:text-gray-400"
                     >
                       Habilidades
                     </a>
                   </NavigationMenuTrigger>
                 </NavigationMenuItem>
 
-                <NavigationMenuItem>
+                <NavigationMenuItem className={`${styles['navegacao-mobile']}`}>
                   <NavigationMenuTrigger>
                     <a
                       href="#projetos"
@@ -125,7 +125,7 @@ const Header: React.FC = () => {
                   </NavigationMenuTrigger>
                 </NavigationMenuItem>
 
-                <NavigationMenuItem>
+                <NavigationMenuItem >
                   <NavigationMenuTrigger>
                     <a
                       href="#contato"

@@ -1,0 +1,44 @@
+.input-form{
+  height: 50px;
+  color: #f4f4f4;
+  border: 2px solid #d3d3d3c7; /* Remove borda padrão */
+  outline: none;
+  box-shadow: none;
+}
+.input-form:hover{
+  border: 2px solid #ffffff; 
+}
+.input-form:focus{
+  border: 2px solid #ffffff; 
+}
+
+
+.button-form{
+  background-color: #00BFFF;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px 10px;
+  font-weight: 500;
+  border-radius: 4px; /* Bordas arredondadas */
+  cursor: pointer; /* Aplica o cursor de ponteiro */
+  transition: background-color 0.3s ease, transform 0.1s ease; /* Transição suave */
+  min-height: 4rem;
+}
+
+.title-contact{
+  font-size: 3rem;
+}
+
+.input-area{
+  height: 150px;
+  color: #f4f4f4;
+  border: 2px solid #d3d3d3c7; /* Remove borda padrão */
+  outline: none;
+  box-shadow: none;
+}
+.input-area:hover{
+  border: 2px solid #ffffff; 
+}
+.input-area:focus{
+  border: 2px solid #ffffff; 
+}
