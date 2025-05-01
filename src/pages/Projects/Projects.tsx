@@ -35,9 +35,8 @@ const Projects: React.FC = () => {
       titulo: "Projeto Webinar",
       descricao:
         "Aplicativo de monitoramento de saúde com recursos para controlar exercícios e alimentação.",
-        imagem: "https://placehold.co/500x400",
+      imagem: "https://placehold.co/500x400",
       tecnologia: "CSS3",
-
     },
     {
       id: 3,
@@ -51,7 +50,7 @@ const Projects: React.FC = () => {
       titulo: "Projeto Colégio Aprovado",
       descricao:
         "Aplicativo para monitoramento de sustentabilidade e consumo de energia.",
-        imagem: "https://placehold.co/500x400",
+      imagem: "https://placehold.co/500x400",
       tecnologia: "React",
     },
   ];
@@ -67,9 +66,14 @@ const Projects: React.FC = () => {
         <div className="mx-auto py-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 max-w-screen-xxl">
           {projetos.map((projeto) => (
             <Dialog key={projeto.id}>
-              <DialogTrigger>
+              <DialogTrigger asChild>
                 <div
-                  className={`${styles["card"]} flex justify-center items-center`}
+                  className={`${styles["card"]} flex justify-center items-center cursor-pointer`}
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={(e) =>
+                    e.key === "Enter" && e.currentTarget.click()
+                  }
                 >
                   <div className={styles["card-image"]}>
                     <img
@@ -82,9 +86,9 @@ const Projects: React.FC = () => {
                       {projeto.titulo}
                     </div>
                     <div className={styles["view-project-btn"]}>
-                      <button className={styles["view-btn"]}>
+                      <div className={styles["view-btn"]}>
                         Visualizar Projeto
-                      </button>
+                      </div>
                     </div>
                   </div>
                 </div>
