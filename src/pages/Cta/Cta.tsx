@@ -44,8 +44,9 @@ const Cta: React.FC = () => {
           {/* Botão à direita */}
           <div>
             <a
-              href="https://wa.me/5511999999999"
+              href="https://api.whatsapp.com/send?phone=5522992747427&text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
               className={`${styles["button-cta"]} flex items-center justify-center gap-2`}
+              target="_blank"
             >
               <span>Entrar em contato</span>
               <FaWhatsapp className="text-xl" />

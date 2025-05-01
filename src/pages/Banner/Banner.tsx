@@ -17,9 +17,16 @@ const Banner: React.FC = () => {
               de Forma Eficiente Online
             </h2>
             <div className="mt-10">
-              <Button className={styles["button-banner"]}>
-                Vamos Conversar <FaWhatsapp className="icon mr-2" />
-              </Button>
+              <a
+                href="https://api.whatsapp.com/send?phone=5522992747427&text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles["icon-link"]}
+              >
+                <Button className={styles["button-banner"]}>
+                  Vamos Conversar <FaWhatsapp className="icon mr-2" />
+                </Button>
+              </a>
             </div>
           </div>
 

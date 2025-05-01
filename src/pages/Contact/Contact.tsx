@@ -4,8 +4,18 @@ import { Label } from "../../components/ui/label";
 import { Button } from "../../components/ui/button";
 import { Input } from "../../components/ui/input";
 import { Textarea } from "../../components/ui/textarea";
+import { useNavigate } from "react-router-dom";
+import React, { FormEvent } from "react";
 
 const Contact: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    navigate("/confirm");
+  };
+
   return (
     <div className={styles.background}>
       <div className="container mx-auto px-5 lg:px-20 py-20">
@@ -22,13 +32,17 @@ const Contact: React.FC = () => {
           </p>
         </div>
 
-        <form className="grid max-w-2xl mx-auto p-1 rounded-2xl shadow-md">
+        <form
+          onSubmit={handleSubmit}
+          className="grid max-w-2xl mx-auto p-1 rounded-2xl shadow-md"
+        >
           <div className="grid gap-2">
             <Label htmlFor="name">Nome</Label>
             <Input
               id="name"
               className={styles["input-form"]}
               placeholder="Nome"
+              required
             />
           </div>
 
@@ -39,6 +53,7 @@ const Contact: React.FC = () => {
               className={styles["input-form"]}
               type="email"
               placeholder="E-mail"
+              required
             />
           </div>
 
@@ -49,6 +64,7 @@ const Contact: React.FC = () => {
               className={styles["input-form"]}
               type="tel"
               placeholder="(00) 00000-0000"
+              required
             />
           </div>
 
@@ -59,6 +75,7 @@ const Contact: React.FC = () => {
               className={styles["input-area"]}
               placeholder="Escreva sua mensagem aqui..."
               rows={50}
+              required
             />
           </div>
 

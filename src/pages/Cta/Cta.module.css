@@ -17,9 +17,15 @@
   border-radius: 4px; /* Bordas arredondadas */
   border: none; /* Remove borda padrão */
   cursor: pointer; /* Aplica o cursor de ponteiro */
-  transition: background-color 0.3s ease, transform 0.1s ease; /* Transição suave */
+  transition: background-color 0.5s ease, transform 0.1s ease; /* Transição suave */
   min-width: 240px;
   min-height: 4rem;
+}
+
+.button-cta:hover {
+  background-color: #fff;
+  color: #0A091F;
+  transform: translateX(-10px);
 }
 
 .button-cta span {

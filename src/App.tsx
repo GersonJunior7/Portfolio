@@ -1,24 +1,15 @@
-import About from "./pages/About/About";
-import Banner from "./pages/Banner/Banner";
-import Contact from "./pages/Contact/Contact";
-import Cta from "./pages/Cta/Cta";
-import Footer from "./pages/Footer/Footer";
-import Header from "./pages/Header/Header";
-import Project from "./pages/Projects/Projects";
-import Skills from "./pages/Skills/Skills";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home/Home";
+import Confirm from "./pages/Confirm/Confirm";
 
 function App() {
   return (
-    <div className="body">
-      <Header />
-      <Banner />
-      <About />
-      <Skills />
-      <Project />
-      <Cta />
-      <Contact />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/confirm" element={<Confirm />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

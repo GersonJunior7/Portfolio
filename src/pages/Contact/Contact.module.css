@@ -19,10 +19,15 @@
   font-size: 20px;
   padding: 10px 10px;
   font-weight: 500;
-  border-radius: 4px; /* Bordas arredondadas */
-  cursor: pointer; /* Aplica o cursor de ponteiro */
-  transition: background-color 0.3s ease, transform 0.1s ease; /* Transição suave */
+  border-radius: 4px; 
+  cursor: pointer; 
+  transition: background-color 0.5s ease, transform 0.1s ease;
   min-height: 4rem;
+}
+
+.button-form:hover{
+  background-color: #fff;
+  color: #020418;
 }
 
 .title-contact{

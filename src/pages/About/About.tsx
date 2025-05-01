@@ -47,7 +47,7 @@ const About: React.FC = () => {
                 asChild
               >
                 <a
-                  href="https://wa.me/seunumerowhats"
+                  href="https://api.whatsapp.com/send?phone=5522992747427&text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles["icon-link"]}
@@ -61,7 +61,7 @@ const About: React.FC = () => {
                 asChild
               >
                 <a
-                  href="https://instagram.com/seuuser"
+                  href="https://instagram.com/devgerson_junior"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles["icon-link"]}
@@ -75,7 +75,7 @@ const About: React.FC = () => {
                 asChild
               >
                 <a
-                  href="https://linkedin.com/in/seuuser"
+                  href="https://www.linkedin.com/in/gerson-junior-498337253/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles["icon-link"]}
@@ -89,7 +89,7 @@ const About: React.FC = () => {
                 asChild
               >
                 <a
-                  href="https://github.com/seuuser"
+                  href="https://github.com/GersonJunior7"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles["icon-link"]}
