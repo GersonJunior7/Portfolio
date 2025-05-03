@@ -90,3 +90,66 @@
   font-size: 2.5rem;
   letter-spacing: 0.1rem;
 }
+
+.dialog-container{
+  min-width: 65%;
+  background-color: #0A091F;
+  height: auto;
+}
+
+.dialogContent {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 100%;
+}
+
+.video {
+  width: 600px;
+  border-radius: 8px;
+}
+
+.info {
+  max-width: 400px;
+}
+
+.info h2{
+  color: #fff;
+}
+
+
+.techList {
+  margin-top: 2rem;
+  color: #fff;
+}
+
+.techList ul {
+  display: flex;
+  gap: 1rem;
+}
+
+.techList li {
+  background-color: #181c39;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.container-video{
+  display: flex;
+  flex-direction: column;
+  
+}
+.button-project{
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+}
+
+@media(min-width: 1024px){
+  .dialogContent {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 2rem;
+    width: 100%;
+  }
+}

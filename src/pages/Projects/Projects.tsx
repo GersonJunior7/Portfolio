@@ -8,6 +8,7 @@ import {
 } from "react-icons/fa";
 import { SiPhp, SiSass } from "react-icons/si"; // Ícone do Sass
 import { SiTailwindcss } from "react-icons/si"; // Ícone do Tailwind CSS
+import video from "../../assets/video-project/Baby-Move/baby.mp4";
 
 import styles from "./Projects.module.css";
 
@@ -19,6 +20,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "../../components/ui/dialog";
+import { Button } from "../../components/ui/button";
 
 const Projects: React.FC = () => {
   const projetos = [
@@ -26,9 +28,17 @@ const Projects: React.FC = () => {
       id: 1,
       titulo: "Projeto Baby-Move",
       descricao:
-        "Projeto que envolve o desenvolvimento de um aplicativo para bebês em movimento.",
-      imagem: "https://placehold.co/500x400",
-      tecnologia: "HTML5",
+        "Site desenvolvido para a Baby Move, uma empresa inovadora voltada para o monitoramento pré-natal, que oferece tecnologia de ponta para proporcionar mais segurança e tranquilidade durante a gestação. O principal objetivo do projeto foi apresentar a solução de forma clara, acessível e confiável, tanto para gestantes quanto para profissionais da saúde.",
+      descricao2: "Atuei diretamente no desenvolvimento do site como desenvolvedor front-end na empresa i3Group, participando de todas as etapas do projeto — desde a estruturação da interface até a implementação das funcionalidades, garantindo uma experiência fluida, responsiva e alinhada com a proposta da marca.",
+        imagem: "https://placehold.co/500x400",
+      videoUrl: video, // apenas o caminho
+      tecnologia: [
+        <FaCss3Alt size={30} color="#00BFFF" />,
+        <FaHtml5 size={30} color="#00BFFF" />,
+        <FaJsSquare size={30} color="#00BFFF" />,
+        <FaBootstrap size={30} color="#00BFFF" />,
+        <SiPhp size={30} color="#00BFFF" />,
+      ],
     },
     {
       id: 2,
@@ -36,14 +46,26 @@ const Projects: React.FC = () => {
       descricao:
         "Aplicativo de monitoramento de saúde com recursos para controlar exercícios e alimentação.",
       imagem: "https://placehold.co/500x400",
-      tecnologia: "CSS3",
+      tecnologia: [
+        <FaCss3Alt size={30} color="#00BFFF" />,
+        <FaHtml5 size={30} color="#00BFFF" />,
+        <FaJsSquare size={30} color="#00BFFF" />,
+        <FaBootstrap size={30} color="#00BFFF" />,
+        <SiPhp size={30} color="#00BFFF" />,
+      ],
     },
     {
       id: 3,
       titulo: "Projeto Tunas Arquitetura",
       descricao: "Plataforma de ensino interativo para crianças.",
       imagem: "https://placehold.co/500x400",
-      tecnologia: "JavaScript",
+      tecnologia: [
+        <FaCss3Alt size={30} color="#00BFFF" />,
+        <FaHtml5 size={30} color="#00BFFF" />,
+        <FaJsSquare size={30} color="#00BFFF" />,
+        <FaBootstrap size={30} color="#00BFFF" />,
+        <SiPhp size={30} color="#00BFFF" />,
+      ],
     },
     {
       id: 4,
@@ -51,7 +73,13 @@ const Projects: React.FC = () => {
       descricao:
         "Aplicativo para monitoramento de sustentabilidade e consumo de energia.",
       imagem: "https://placehold.co/500x400",
-      tecnologia: "React",
+      tecnologia: [
+        <FaCss3Alt size={30} color="#00BFFF" />,
+        <FaHtml5 size={30} color="#00BFFF" />,
+        <FaJsSquare size={30} color="#00BFFF" />,
+        <FaBootstrap size={30} color="#00BFFF" />,
+        <SiPhp size={30} color="#00BFFF" />,
+      ],
     },
   ];
 
@@ -94,11 +122,43 @@ const Projects: React.FC = () => {
                 </div>
               </DialogTrigger>
 
-              <DialogContent>
-                <DialogHeader>
-                  <DialogTitle>{projeto.tecnologia}</DialogTitle>
-                  <DialogDescription>{projeto.descricao}</DialogDescription>
-                </DialogHeader>
+              <DialogContent className={styles["dialog-container"]}>
+                <div className={styles.dialogContent}>
+                  {/* Vídeo à esquerda */}
+                  <div className={styles["container-video"]}>
+                    <video
+                      className={styles.video}
+                      controls
+                      autoPlay
+                      muted
+                      loop
+                    >
+                      <source src={projeto.videoUrl} type="video/mp4" />
+                    </video>
+                    <div className={styles["button-project"]}>
+                      <Button>Acessar WebSite</Button>
+                      <Button>GitHub</Button>
+                    </div>
+                  </div>
+
+                  {/* Conteúdo à direita */}
+                  <div className={styles.info}>
+                    <DialogHeader>
+                      <DialogTitle>{projeto.titulo}</DialogTitle>
+                      <DialogDescription>{projeto.descricao}</DialogDescription>
+                      <DialogDescription>{projeto.descricao2}</DialogDescription>
+                    </DialogHeader>
+
+                    <div className={styles.techList}>
+                      <ul>
+                        {Array.isArray(projeto.tecnologia) &&
+                          projeto.tecnologia.map((tech, index) => (
+                            <li key={index}>{tech}</li>
+                          ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </DialogContent>
             </Dialog>
           ))}
