@@ -6,7 +6,7 @@ import {
   FaJsSquare,
   FaReact,
 } from "react-icons/fa";
-import { SiPhp, SiSass } from "react-icons/si"; // Ícone do Sass
+import { SiPhp, SiSass, SiTypescript } from "react-icons/si"; // Ícone do Sass
 import { SiTailwindcss } from "react-icons/si"; // Ícone do Tailwind CSS
 
 import styles from "./Skills.module.css";
@@ -45,41 +45,48 @@ const Skills: React.FC = () => {
     },
     {
       id: 4,
+      title: "TypeScript",
+      icon: <SiTypescript size={50} color="#3178C6" />,
+      description:
+        "Um superset do JavaScript que adiciona tipagem estática ao código, ajudando a evitar erros e melhorar a produtividade no desenvolvimento. Muito utilizado em aplicações modernas com React, Node.js, entre outros.",
+    },
+    {
+      id: 5,
       title: "Bootstrap",
       icon: <FaBootstrap size={50} color="#563D7C" />,
       description:
         "Um framework front-end que facilita a criação de páginas web responsivas e estéticas. Ele oferece componentes prontos como botões, barras de navegação, modais, e muito mais, com um design consistente.",
     },
     {
-      id: 5,
+      id: 6,
       title: "Sass",
       icon: <SiSass size={50} color="#CC6699" />,
       description:
         "Um pré-processador CSS que adiciona funcionalidades avançadas ao CSS, como variáveis, aninhamento de regras e mixins, tornando o código mais organizado e reutilizável.",
     },
     {
-      id: 6,
+      id: 7,
       title: "Tailwind Css",
       icon: <SiTailwindcss size={50} color="#06B6D4" />,
       description:
         "Um framework CSS baseado em utilitários que permite um controle preciso sobre o design da página, utilizando classes para definir estilos diretamente nos elementos HTML, tornando a construção de layouts rápida e flexível.",
     },
     {
-      id: 7,
+      id: 8,
       title: "React",
       icon: <FaReact size={50} color="#61DBFB" />,
       description:
         "Uma biblioteca JavaScript para a criação de interfaces de usuário interativas e reutilizáveis. React facilita a construção de componentes dinâmicos e eficientes, melhorando a experiência do desenvolvedor.",
     },
     {
-      id: 8,
+      id: 9,
       title: "PHP",
       icon: <SiPhp size={50} color="#8A2BE2" />,
       description:
         "Uma linguagem de programação de uso geral, principal voltada para o desenvolvimento de sites dinâmicos. Com PHP, você pode criar funcionalidades interativas, processar formulários e manipular dados em servidores.",
     },
     {
-      id: 9,
+      id: 10,
       title: "SQL",
       icon: <FaDatabase size={50} color="#00618B" />,
       description:

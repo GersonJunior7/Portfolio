@@ -28,8 +28,8 @@ const Projects: React.FC = () => {
       id: 1,
       titulo: "Projeto Baby-Move",
       descricao:
-        "Site desenvolvido para a Baby Move, uma empresa inovadora voltada para o monitoramento pré-natal, que oferece tecnologia de ponta para proporcionar mais segurança e tranquilidade durante a gestação. O principal objetivo do projeto foi apresentar a solução de forma clara, acessível e confiável, tanto para gestantes quanto para profissionais da saúde.",
-      descricao2: "Atuei diretamente no desenvolvimento do site como desenvolvedor front-end na empresa i3Group, participando de todas as etapas do projeto — desde a estruturação da interface até a implementação das funcionalidades, garantindo uma experiência fluida, responsiva e alinhada com a proposta da marca.",
+        "Site desenvolvido para a Baby Move, empresa focada no monitoramento pré-natal com tecnologia de ponta. O projeto teve como objetivo apresentar a solução de forma clara e confiável para gestantes e profissionais da saúde. Atuei como desenvolvedor front-end na i3Group, participando desde a estruturação da interface até a implementação das funcionalidades, garantindo uma experiência responsiva e alinhada à marca.",
+      descricao2: "",
         imagem: "https://placehold.co/500x400",
       videoUrl: video, // apenas o caminho
       tecnologia: [
@@ -144,8 +144,8 @@ const Projects: React.FC = () => {
                   {/* Conteúdo à direita */}
                   <div className={styles.info}>
                     <DialogHeader>
-                      <DialogTitle>{projeto.titulo}</DialogTitle>
-                      <DialogDescription>{projeto.descricao}</DialogDescription>
+                      <DialogTitle className="text-left">{projeto.titulo}</DialogTitle>
+                      <DialogDescription className="text-left">{projeto.descricao}</DialogDescription>
                       <DialogDescription>{projeto.descricao2}</DialogDescription>
                     </DialogHeader>
 

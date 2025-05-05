@@ -1,6 +1,6 @@
 .card {
   height: 328px;
-  width: 440px;
+  width: 360px;
   background-color: #06091a;
   padding: 20px;
   transition: transform 0.3s ease-in-out; /* Animação de escala para o card */
@@ -151,5 +151,8 @@
     flex-wrap: nowrap;
     gap: 2rem;
     width: 100%;
+  }
+  .card{
+    width: 440px;
   }
 }
