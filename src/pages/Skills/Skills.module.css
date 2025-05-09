@@ -26,3 +26,7 @@
 .dialog-content{
   background-color: #020418;
 }
+
+.dialog-content button{
+  color: #fff;
+}

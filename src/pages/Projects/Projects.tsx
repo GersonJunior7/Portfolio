@@ -6,7 +6,13 @@ import {
   FaJsSquare,
   FaReact,
 } from "react-icons/fa";
-import { SiElementor, SiPhp, SiSass, SiTypescript, SiWordpress } from "react-icons/si"; // Ícone do Sass
+import {
+  SiElementor,
+  SiPhp,
+  SiSass,
+  SiTypescript,
+  SiWordpress,
+} from "react-icons/si"; // Ícone do Sass
 import { SiTailwindcss } from "react-icons/si"; // Ícone do Tailwind CSS
 import video from "../../assets/video-project/Baby-Move/baby.mp4";
 
@@ -21,16 +27,19 @@ import {
   DialogTrigger,
 } from "../../components/ui/dialog";
 import { Button } from "../../components/ui/button";
+import { useState } from "react";
 
 const Projects: React.FC = () => {
+  const [filtro, setFiltro] = useState("todos");
   const projetos = [
     {
       id: 1,
+      stack: "front-end",
       titulo: "Porfólio Dev",
       descricao:
         "Este portfólio foi desenvolvido com o objetivo de apresentar meus principais projetos, minhas habilidades como desenvolvedor web e também contar um pouco sobre minha trajetória profissional. A ideia é transmitir, de forma clara e visualmente agradável, quem sou eu, como trabalho e como posso contribuir para soluções digitais eficientes e modernas. Cada detalhe foi pensado para refletir minha identidade profissional e demonstrar minha capacidade técnica.",
       descricao2: "",
-        imagem: "https://placehold.co/500x400",
+      imagem: "https://placehold.co/500x400",
       videoUrl: video, // apenas o caminho
       tecnologia: [
         <FaReact size={30} color="#00BFFF" />,
@@ -43,10 +52,11 @@ const Projects: React.FC = () => {
     {
       id: 2,
       titulo: "Projeto Baby-Move",
+      stack: "front-end",
       descricao:
         "Site desenvolvido para a Baby Move, empresa focada no monitoramento pré-natal com tecnologia de ponta. O projeto teve como objetivo apresentar a solução de forma clara e confiável para gestantes e profissionais da saúde. Atuei como desenvolvedor front-end na i3Group, participando desde a estruturação da interface até a implementação das funcionalidades, garantindo uma experiência responsiva e alinhada à marca.",
       descricao2: "",
-        imagem: "https://placehold.co/500x400",
+      imagem: "https://placehold.co/500x400",
       videoUrl: video, // apenas o caminho
       tecnologia: [
         <FaCss3Alt size={30} color="#00BFFF" />,
@@ -59,6 +69,7 @@ const Projects: React.FC = () => {
     {
       id: 3,
       titulo: "Academia Nexus",
+      stack: "backend",
       descricao:
         "Projeto desenvolvido para uma academia local com o objetivo de apresentar a estrutura, os serviços oferecidos e atrair novos alunos. Utilizei WordPress junto ao construtor Elementor para garantir uma entrega rápida, moderna e totalmente responsiva. O site conta com seções bem definidas, como planos de treino, galeria de fotos, informações sobre os instrutores e formulário de contato integrado. Este projeto demonstra minha capacidade de criar soluções visuais e funcionais utilizando ferramentas no-code, atendendo às necessidades do cliente de forma profissional e eficiente.",
       imagem: "https://placehold.co/500x400",
@@ -71,16 +82,40 @@ const Projects: React.FC = () => {
     },
   ];
 
+  const projetosFiltrados =
+    filtro === "todos" ? projetos : projetos.filter((p) => p.stack === filtro);
+
   return (
     <div className="container mx-auto px-5 lg:px-20 py-50">
       <div className={`${styles["content-title-projects"]} text-center`}>
         <h1 className={`${styles["title-projects"]} font-bold text-white`}>
           Meus Projetos
         </h1>
+
+        <div className="flex justify-center gap-4 mt-6">
+          <Button
+            variant={filtro === "todos" ? "default" : "outline"}
+            onClick={() => setFiltro("todos")}
+          >
+            Ver Todos
+          </Button>
+          <Button
+            variant={filtro === "front-end" ? "default" : "outline"}
+            onClick={() => setFiltro("front-end")}
+          >
+            Front-end
+          </Button>
+          <Button
+            variant={filtro === "backend" ? "default" : "outline"}
+            onClick={() => setFiltro("backend")}
+          >
+            Back-end
+          </Button>
+        </div>
       </div>
       <div className={styles["content-group"]}>
         <div className="mx-auto py-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 max-w-screen-xxl">
-          {projetos.map((projeto) => (
+          {projetosFiltrados.map((projeto) => (
             <Dialog key={projeto.id}>
               <DialogTrigger asChild>
                 <div
@@ -132,9 +167,15 @@ const Projects: React.FC = () => {
                   {/* Conteúdo à direita */}
                   <div className={styles.info}>
                     <DialogHeader>
-                      <DialogTitle className="text-left">{projeto.titulo}</DialogTitle>
-                      <DialogDescription className="text-left">{projeto.descricao}</DialogDescription>
-                      <DialogDescription>{projeto.descricao2}</DialogDescription>
+                      <DialogTitle className="text-left">
+                        {projeto.titulo}
+                      </DialogTitle>
+                      <DialogDescription className="text-left">
+                        {projeto.descricao}
+                      </DialogDescription>
+                      <DialogDescription>
+                        {projeto.descricao2}
+                      </DialogDescription>
                     </DialogHeader>
 
                     <div className={styles.techList}>

@@ -97,6 +97,10 @@
   height: auto;
 }
 
+.dialog-container button{
+  color: #fff;
+}
+
 .dialogContent {
   display: flex;
   flex-wrap: wrap;
