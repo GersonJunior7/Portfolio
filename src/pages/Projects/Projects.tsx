@@ -6,7 +6,7 @@ import {
   FaJsSquare,
   FaReact,
 } from "react-icons/fa";
-import { SiPhp, SiSass } from "react-icons/si"; // Ícone do Sass
+import { SiElementor, SiPhp, SiSass, SiTypescript, SiWordpress } from "react-icons/si"; // Ícone do Sass
 import { SiTailwindcss } from "react-icons/si"; // Ícone do Tailwind CSS
 import video from "../../assets/video-project/Baby-Move/baby.mp4";
 
@@ -26,6 +26,22 @@ const Projects: React.FC = () => {
   const projetos = [
     {
       id: 1,
+      titulo: "Porfólio Dev",
+      descricao:
+        "Este portfólio foi desenvolvido com o objetivo de apresentar meus principais projetos, minhas habilidades como desenvolvedor web e também contar um pouco sobre minha trajetória profissional. A ideia é transmitir, de forma clara e visualmente agradável, quem sou eu, como trabalho e como posso contribuir para soluções digitais eficientes e modernas. Cada detalhe foi pensado para refletir minha identidade profissional e demonstrar minha capacidade técnica.",
+      descricao2: "",
+        imagem: "https://placehold.co/500x400",
+      videoUrl: video, // apenas o caminho
+      tecnologia: [
+        <FaReact size={30} color="#00BFFF" />,
+        <SiTypescript size={30} color="#00BFFF" />,
+        <FaJsSquare size={30} color="#00BFFF" />,
+        <FaCss3Alt size={30} color="#00BFFF" />,
+        <SiTailwindcss size={30} color="#00BFFF" />,
+      ],
+    },
+    {
+      id: 2,
       titulo: "Projeto Baby-Move",
       descricao:
         "Site desenvolvido para a Baby Move, empresa focada no monitoramento pré-natal com tecnologia de ponta. O projeto teve como objetivo apresentar a solução de forma clara e confiável para gestantes e profissionais da saúde. Atuei como desenvolvedor front-end na i3Group, participando desde a estruturação da interface até a implementação das funcionalidades, garantindo uma experiência responsiva e alinhada à marca.",
@@ -41,44 +57,16 @@ const Projects: React.FC = () => {
       ],
     },
     {
-      id: 2,
-      titulo: "Projeto Webinar",
-      descricao:
-        "Aplicativo de monitoramento de saúde com recursos para controlar exercícios e alimentação.",
-      imagem: "https://placehold.co/500x400",
-      tecnologia: [
-        <FaCss3Alt size={30} color="#00BFFF" />,
-        <FaHtml5 size={30} color="#00BFFF" />,
-        <FaJsSquare size={30} color="#00BFFF" />,
-        <FaBootstrap size={30} color="#00BFFF" />,
-        <SiPhp size={30} color="#00BFFF" />,
-      ],
-    },
-    {
       id: 3,
-      titulo: "Projeto Tunas Arquitetura",
-      descricao: "Plataforma de ensino interativo para crianças.",
-      imagem: "https://placehold.co/500x400",
-      tecnologia: [
-        <FaCss3Alt size={30} color="#00BFFF" />,
-        <FaHtml5 size={30} color="#00BFFF" />,
-        <FaJsSquare size={30} color="#00BFFF" />,
-        <FaBootstrap size={30} color="#00BFFF" />,
-        <SiPhp size={30} color="#00BFFF" />,
-      ],
-    },
-    {
-      id: 4,
-      titulo: "Projeto Colégio Aprovado",
+      titulo: "Academia Nexus",
       descricao:
-        "Aplicativo para monitoramento de sustentabilidade e consumo de energia.",
+        "Projeto desenvolvido para uma academia local com o objetivo de apresentar a estrutura, os serviços oferecidos e atrair novos alunos. Utilizei WordPress junto ao construtor Elementor para garantir uma entrega rápida, moderna e totalmente responsiva. O site conta com seções bem definidas, como planos de treino, galeria de fotos, informações sobre os instrutores e formulário de contato integrado. Este projeto demonstra minha capacidade de criar soluções visuais e funcionais utilizando ferramentas no-code, atendendo às necessidades do cliente de forma profissional e eficiente.",
       imagem: "https://placehold.co/500x400",
       tecnologia: [
+        <SiWordpress size={30} color="#00BFFF" />,
+        <SiElementor size={30} color="#00BFFF" />,
         <FaCss3Alt size={30} color="#00BFFF" />,
         <FaHtml5 size={30} color="#00BFFF" />,
-        <FaJsSquare size={30} color="#00BFFF" />,
-        <FaBootstrap size={30} color="#00BFFF" />,
-        <SiPhp size={30} color="#00BFFF" />,
       ],
     },
   ];

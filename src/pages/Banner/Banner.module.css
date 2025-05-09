@@ -30,8 +30,9 @@
 }
 
 .button-banner:hover {
-  background-color: #040615;
+  background-color: #fff;
   transform: scale(1.05); /* Leve aumento de tamanho para destaque */
+  color: #020418;
 }
 
 @media(min-width: 768px){

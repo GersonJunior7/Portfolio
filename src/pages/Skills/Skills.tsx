@@ -2,11 +2,13 @@ import {
   FaBootstrap,
   FaCss3Alt,
   FaDatabase,
+  FaGitAlt,
+  FaGithub,
   FaHtml5,
   FaJsSquare,
   FaReact,
 } from "react-icons/fa";
-import { SiPhp, SiSass, SiTypescript } from "react-icons/si"; // Ícone do Sass
+import { SiElementor, SiPhp, SiSass, SiTypescript, SiWordpress } from "react-icons/si"; // Ícone do Sass
 import { SiTailwindcss } from "react-icons/si"; // Ícone do Tailwind CSS
 
 import styles from "./Skills.module.css";
@@ -92,6 +94,34 @@ const Skills: React.FC = () => {
       description:
         "Uma linguagem de consulta estruturada usada para gerenciar dados em bancos de dados relacionais. Com SQL, você pode criar, ler, atualizar e excluir dados, além de estruturar consultas complexas.",
     },
+    {
+      id: 11,
+      title: "Git",
+      icon: <FaGitAlt size={50} color="#F05032" />,
+      description:
+        "Um sistema de controle de versão distribuído que permite acompanhar o histórico de alterações no código, colaborar com outras pessoas e gerenciar diferentes versões de um projeto de forma eficiente.",
+    },
+    {
+      id: 12,
+      title: "GitHub",
+      icon: <FaGithub size={50} color="#fff" />,
+      description:
+        "Uma plataforma baseada em Git usada para hospedagem de código, colaboração entre desenvolvedores, versionamento de projetos e integração contínua. Amplamente utilizada no desenvolvimento open-source e profissional.",
+    },
+    {
+      id: 13,
+      title: "WordPress",
+      icon: <SiWordpress size={50} color="#21759B" />,
+      description:
+        "Um CMS (Sistema de Gerenciamento de Conteúdo) amplamente utilizado para criar sites e blogs com facilidade. Permite gerenciamento de conteúdo dinâmico e integração com plugins para funcionalidades extras.",
+    },
+    {
+      id: 14,
+      title: "Elementor",
+      icon: <SiElementor size={50} color="#92003B" />,
+      description:
+        "Um dos construtores visuais mais populares para WordPress. Com Elementor, é possível criar páginas arrastando e soltando elementos, otimizando o processo de criação visual sem necessidade de codificação.",
+    },
   ];
 
   return (
@@ -105,7 +135,7 @@ const Skills: React.FC = () => {
         <div className={`${styles["content-group-skills"]} text-white`}>
           <div className="mx-auto grid grid-cols-3 sm:grid-cols-3 py-20 md:grid-cols-5 gap-8 max-w-md md:max-w-4xl">
             {skills.map((skill) => (
-              <Dialog key={skill.id}>
+              <Dialog key={skill.id} >
                 <DialogTrigger>
                   <div
                     className={`${styles["card"]} card flex justify-center items-center`}
@@ -113,9 +143,9 @@ const Skills: React.FC = () => {
                     {skill.icon}
                   </div>
                 </DialogTrigger>
-                <DialogContent>
+                <DialogContent className={styles['dialog-content']}>
                   <DialogHeader>
-                    <DialogTitle>{skill.title}</DialogTitle>
+                    <DialogTitle className="text-white">{skill.title}</DialogTitle>
                     <DialogDescription>{skill.description}</DialogDescription>
                   </DialogHeader>
                 </DialogContent>
